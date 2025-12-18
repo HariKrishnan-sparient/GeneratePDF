@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Property Report</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #000;
+        }
+
+        .header-table {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .header-left {
+            text-align: left;
+            font-size: 11px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            padding: 6px;
+            font-size: 13px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        .label {
+            font-weight: bold;
+            width: 30%;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <table class="header-table">
+        <tr>
+            <td class="header-left">
+                <strong>Client:</strong> {{ ClientName }}<br />
+                <strong>User:</strong> {{ UserName }}
+            </td>
+        </tr>
+    </table>
+
+    <div class="title">
+        {{ ReportName }}
+    </div>
+
+
+    <table>
+        <tr>
+            <td colspan="2" class="section-title">Property Information</td>
+        </tr>
+        <tr>
+            <td class="label">Property ID</td>
+            <td>{{ SubjectProperty.PropertyId }}</td>
+        </tr>
+        <tr>
+            <td class="label">Street Address</td>
+            <td>{{ SubjectProperty.SitusAddress.StreetAddress }}</td>
+        </tr>
+        <tr>
+            <td class="label">City</td>
+            <td>{{ SubjectProperty.SitusAddress.City }}</td>
+        </tr>
+        <tr>
+            <td class="label">State</td>
+            <td>{{ SubjectProperty.SitusAddress.State }}</td>
+        </tr>
+        <tr>
+            <td class="label">Zip</td>
+            <td>{{ SubjectProperty.SitusAddress.Zip9 }}</td>
+        </tr>
+        <tr>
+            <td class="label">County</td>
+            <td>{{ SubjectProperty.SitusAddress.County }}</td>
+        </tr>
+    </table>
+
+    <!-- Owner Information -->
+    <table>
+        <tr>
+            <td colspan="2" class="section-title">Owner Information</td>
+        </tr>
+        <tr>
+            <td class="label">Owner Names</td>
+            <td>{{ OwnerInformation.OwnerNames }}</td>
+        </tr>
+        <tr>
+            <td class="label">Mailing Address</td>
+            <td>
+                {{ OwnerInformation.MailingAddress.StreetAddress }}<br />
+                {{ OwnerInformation.MailingAddress.City }},
+                {{ OwnerInformation.MailingAddress.State }}
+                {{ OwnerInformation.MailingAddress.Zip9 }}
+            </td>
+        </tr>
+    </table>
+
+    <!-- Listing Details -->
+    <table>
+        <tr>
+            <td colspan="2" class="section-title">Listing Details</td>
+        </tr>
+        <tr>
+            <td class="label">Listing Number</td>
+            <td>{{ ListingPropertyDetail.ListingNumber }}</td>
+        </tr>
+        <tr>
+            <td class="label">Listing Price</td>
+            <td>{{ ListingPropertyDetail.ListingPrice }}</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

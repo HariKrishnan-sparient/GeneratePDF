@@ -1,0 +1,28 @@
+{
+  "ClientName": "Informative Research",
+  "UserName": "SangeethaC",
+  "ReportName": "Property Report Sample",
+  "SubjectProperty": {
+    "PropertyId": 106559002,
+    "SitusAddress": {
+      "StreetAddress": "5683 CHESTNUT RIDGE RD",
+      "City": "HUBBARD",
+      "State": "OH",
+      "Zip9": "44425-2804",
+      "County": "TRUMBULL"
+    }
+  },
+  "OwnerInformation": {
+    "OwnerNames": "US BANK NATIONAL ASSOCIATION / WACHOVIABANK NA",
+    "MailingAddress": {
+      "StreetAddress": "3217 DECKER LAKE DR",
+      "City": "WEST VALLEY CITY",
+      "State": "UT",
+      "Zip9": "84119-3284"
+    }
+  },
+  "ListingPropertyDetail": {
+    "ListingNumber": "5119217",
+    "ListingPrice": 235900
+  }
+}
